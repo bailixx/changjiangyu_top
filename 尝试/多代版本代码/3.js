@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      4.0
 // @description  放弃画图，直接弹窗显示原始 URL
-// @match        *://*.yuketang.cn/*
+// @match        *://*.yuketang.cn/* 这个地方更换成每一节课对应的代码
 // @run-at       document-start
 // @grant        none
 // ==/UserScript==
@@ -43,3 +43,5 @@
     };
     window.WebSocket.prototype = OriginalWebSocket.prototype;
 })();
+
+//在油猴脚本里面尝试之后，没有太大作用，无法突破动态二维码的封锁
